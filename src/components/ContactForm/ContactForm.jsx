@@ -5,7 +5,7 @@ import { MdMessage } from "react-icons/md";
 import { MdCall, MdEmail } from "react-icons/md";
 
 const ContactForm = () => {
-  const [name, setName] = useState("Adnaan");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [text, setText] = useState("");
 
@@ -35,15 +35,15 @@ const ContactForm = () => {
         <form onSubmit={onSubmit}>
           <div className={styles.form_control}>
             <label htmlFor="name">Name</label>
-            <input type="text" name="name" />
+            <input type="text" name="name" placeholder="Type your name here" />
           </div>
           <div className={styles.form_control}>
             <label htmlFor="email">Email</label>
-            <input type="email" name="email" />
+            <input type="email" name="email" placeholder="Type your email here" />
           </div>
           <div className={styles.form_control}>
             <label htmlFor="text">Text</label>
-            <textarea name="text" rows="8" />
+            <textarea name="text" rows="8" placeholder="How can we serve you better, Drop you Suggestions" />
           </div>
           <div
             style={{
